@@ -1,5 +1,6 @@
-# This is a README file
-This project is for the __ot-harjoitustyo__  \
-*by JK*  \
+# Ohjelmistotekniikka, harjoitustyö  \
+*Jakob kråkström*  \
+## Tehtävät  \
+__Viikko 1__  \
 [komentorivi.txt](./laskarit/viikko1/komentorivi.txt)  \
 [gitlog.txt](./laskarit/viikko1/gitlog.txt)  
