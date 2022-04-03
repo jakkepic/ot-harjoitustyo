@@ -4,3 +4,5 @@
 | :----:|:-----| :-----|
 | 25.3. | 2    | Suunnittelu, piirustus |
 | 29.3. | 4    | Vaatimusmääritelmä |
+| 1.4.  | 1    | Ohjelmointi |
+| 2.4.  | 1    | Ohjelmointi |
