@@ -5,5 +5,4 @@ class HtService:
         pass
 
     def create_voucher(self, number: int, cost_centre: str, debet: bool, credit: bool, ammount: int, message: str):
-        voucher = Voucher(self, number: int, cost_centre: str, debet: bool, credit: bool, ammount: int, message: str)
-        
+        voucher = Voucher(number, cost_centre, debet, credit, ammount, message)
