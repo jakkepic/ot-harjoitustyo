@@ -1,9 +1,10 @@
-from re import T
+from tkinter import Tk
 from ui.ui import Ui
-from database_connection import get_database_connection
 
 def main():
-    pass
+    window = Tk()
+
+    window.mainloop()
 
 if __name__ == "__main__":
     main()
