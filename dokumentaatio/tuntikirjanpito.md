@@ -10,3 +10,4 @@
 | 5.4.  | 1    | Ensimmäisen testin lisääminen |
 | 7.4.  | 2    | Ohjelmointi |
 | 8.4.  | 2    | Ohjelmointi |
+| 10.4. | 1    | Ohjelmointi |

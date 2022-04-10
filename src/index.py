@@ -1,8 +1,11 @@
 from tkinter import Tk
-from ui.ui import Ui
+from ui.ui import UI
 
 def main():
     window = Tk()
+
+    ui_view = UI(window)
+    ui_view.start()
 
     window.mainloop()
 
