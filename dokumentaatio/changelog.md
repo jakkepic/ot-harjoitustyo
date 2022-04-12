@@ -8,4 +8,4 @@
 - Lisätty CostCentre-luokka
 - Tietokannalle rajapinta voucher_repository.py
 - Lisätty sovelluslogiikkaa tietokannan käsittelemiseen
-- Käyttöliittymään lisätty ensimmäinen näkymä
+- Käyttöliittymä lisätty, toiminnallisuus puuttuu vielä

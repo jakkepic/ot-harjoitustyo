@@ -1,7 +1,7 @@
 from tkinter import *
 from services.ht_service import HtService
 
-class VoucherView:
+class AccountSchemeView:
     def __init__(self, root, back_to_program_view):
         self._root = root
         self._back_to_program_view = back_to_program_view
@@ -21,6 +21,6 @@ class VoucherView:
         self._frame.pack()
         frame1 = Frame(self._frame, bg="white")
         frame1.place(relwidth=0.8, relheight=0.8, relx=0.1, rely=0.1)
-        
+
         back_button = Button(frame1, text="Back", command=self._back_to_program_view)
         back_button.pack(pady=20)
