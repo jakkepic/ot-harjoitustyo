@@ -21,6 +21,13 @@ class UI():
     def _show_program_view(self):
         self._hide_current_view()
         
-        self._current_view = ProgramView(self._root)
+        self._current_view = ProgramView(self._root, self._show_voucher_view)
+
+        self._current_view.pack()
+    
+    def _show_voucher_view(self):
+        self._hide_current_view()
+        
+        self._current_view = VoucherView(self._root)
 
         self._current_view.pack()

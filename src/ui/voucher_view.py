@@ -16,4 +16,7 @@ class VoucherView:
         self._frame.destroy()
     
     def _initialize(self):
-        pass
+        self._frame = Frame(self._root, bg="red", width=400, height=400)
+        self._frame.pack()
+        frame1 = Frame(self._frame, bg="white")
+        frame1.place(relwidth=0.8, relheight=0.8, relx=0.1, rely=0.1)

@@ -3,8 +3,9 @@ from services.ht_service import HtService
 
 
 class ProgramView:
-    def __init__(self, root):
+    def __init__(self, root, handle_add_voucher):
         self._root = root
+        self._handle_add_voucher = handle_add_voucher
         self._frame = None
 
         self._initialize()
@@ -22,7 +23,7 @@ class ProgramView:
         frame1 = Frame(self._frame, bg="white")
         frame1.place(relwidth=0.8, relheight=0.8, relx=0.1, rely=0.1)
 
-        button1 = Button(frame1, text="Add Voucher", padx=30)
+        button1 = Button(frame1, text="Add Voucher", padx=30, command=self._handle_add_voucher)
         button1.pack(pady=20)
 
         button2 = Button(frame1, text="View Vouchers", padx=25)
