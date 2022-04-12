@@ -11,3 +11,6 @@
 | 7.4.  | 2    | Ohjelmointi |
 | 8.4.  | 2    | Ohjelmointi |
 | 10.4. | 1    | Ohjelmointi |
+| 12.4. | 1    | Ohjelmointi |
+| :----:|:-----| :-----|
+| Summa | 19   | Tuntia |
