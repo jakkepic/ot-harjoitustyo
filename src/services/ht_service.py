@@ -1,23 +1,20 @@
 from entities.voucher import Voucher
-from entities.costcentre import CostCentre
 from repositories.voucher_repository import VoucerRepository
 
 class HtService:
     def __init__(self) -> None:
-        pass
-
-    def create_voucher(self, number: int, cost_centre: str, debet_credit: int, ammount: int, message: str):
-        return Voucher(number, cost_centre, debet_credit, ammount, message)
+        self._voucher_repository = VoucerRepository()
     
-    def save_voucher(self, v: Voucher):
-        success = VoucerRepository.save_voucer(v)
+    def save_voucher(self, number: int, cost_centre: str, debit_credit: int, ammount: int, message: str):
+        v = Voucher(number, cost_centre, debit_credit, ammount, message)
+        success = self._voucher_repository.save_new_voucher(v)
         return success
     
-    def get_vouchers():
-        return VoucerRepository.fetch_vouchers
+    def get_vouchers(self):
+        return self._voucher_repository.fetch_vouchers()
     
     def delete_voucher(self, n: int):
-        VoucerRepository.delete_voucher(n)
+        self._voucher_repository.delete_voucher(n)
 
     def change_voucher(self, v: Voucher):
         n = v.number
@@ -25,5 +22,12 @@ class HtService:
         s = self.save_voucher(v)
         return s
     
-    def create_costcentre(self, idcode, name=None):
-        return CostCentre(idcode, name)
+    def save_new_account(self, number: str, name:str):
+        success = self._voucher_repository.save_account(number, name)
+        return success
+    
+    def find_account(self, number:str):
+        return self._voucher_repository.find_account(number)
+        
+    def get_accounts(self):
+        return self._voucher_repository.fetch_accounts()

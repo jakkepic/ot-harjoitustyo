@@ -9,3 +9,8 @@
 - Tietokannalle rajapinta voucher_repository.py
 - Lisätty sovelluslogiikkaa tietokannan käsittelemiseen
 - Käyttöliittymä lisätty, toiminnallisuus puuttuu vielä
+
+## Viikko 5
+
+- Lisätty näkymä tositteiden lisäämiseksi
+- Lisätty taulukko tilikartalle

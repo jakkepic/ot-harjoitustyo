@@ -9,8 +9,5 @@ try:
 except FileNotFoundError:
     pass
 
-COSTCENTRE_FILENAME = os.getenv('COSTCENTRE_FILENAME') or 'costcentre.sqlite'
-COSTCENTRE_FILE_PATH = os.path.join(dirname, '..', 'data', COSTCENTRE_FILENAME)
-
 DATABASE_FILENAME = os.getenv('DATABASE_FILENAME') or 'database.sqlite'
 DATABASE_FILE_PATH = os.path.join(dirname, '..', 'data', DATABASE_FILENAME)

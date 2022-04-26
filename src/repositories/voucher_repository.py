@@ -5,7 +5,7 @@ class VoucerRepository():
     def __init__(self) -> None:
         pass
 
-    def save_voucer(self, v: Voucher):
+    def save_new_voucher(self, v: Voucher):
         db = get_database_connection()
         db.isolation_level = None
         previous = db.execute("SELECT * FROM vouchers WHERE number == ?", [v.number]).fetchone()
@@ -17,7 +17,7 @@ class VoucerRepository():
     def delete_voucher(self, v: Voucher):
         db = get_database_connection()
         db.isolation_level = None
-        previous = db.execute("DELETE FROM vouchers WHERE number == ?", [v.number]).fetchone()
+        db.execute("DELETE FROM vouchers WHERE number == ?", [v.number])
 
     def fetch_vouchers():
         vouchers = []
@@ -28,3 +28,27 @@ class VoucerRepository():
             v = Voucher(e[0], e[1], e[2], e[3], e[4])
             vouchers.append(v)
         return vouchers
+    
+    def save_account(self, number: str, name: str):
+        db = get_database_connection()
+        db.isolation_level = None
+        exists = db.execute("Select * FROM accounts WHERE number==?", [number]).fetchone()
+        if exists:
+            return False
+        db.execute("INSERT INTO accounts (number, name) VALUES (?, ?)", [number, name])
+        return True
+    
+    def find_account(self, number):
+        db = get_database_connection()
+        db.isolation_level = None
+        exists = db.execute("Select number, name FROM accounts WHERE number==?", [number]).fetchone()
+        if exists:
+            return True
+        return False
+
+    def fetch_accounts(self):
+        db = get_database_connection()
+        db.isolation_level = None
+        data = db.execute("Select number, name FROM accounts").fetchall()
+        return data
+
