@@ -14,12 +14,12 @@ class VoucerRepository():
         db.execute("INSERT INTO vouchers (number, costcentre, debitcredit, ammount, message) VALUES (?, ?, ?, ?, ?)", [v.number, v.cost_centre, v.debit_credit, v.ammount, v.message])
         return True
     
-    def delete_voucher(self, v: Voucher):
+    def delete_voucher(self, n: int):
         db = get_database_connection()
         db.isolation_level = None
-        db.execute("DELETE FROM vouchers WHERE number == ?", [v.number])
+        db.execute("DELETE FROM vouchers WHERE number == ?", [n])
 
-    def fetch_vouchers():
+    def fetch_vouchers(self):
         vouchers = []
         db = get_database_connection()
         db.isolation_level = None

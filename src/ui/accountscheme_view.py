@@ -19,19 +19,17 @@ class AccountSchemeView:
         self._frame.destroy()
     
     def _initialize(self):
-        self._frame = Frame(self._root, bg="red", width=400, height=400)
+        self._frame = Frame(self._root, width=400, height=500, bg="white")
         self._frame.pack()
-        frame1 = Frame(self._frame, bg="white")
-        frame1.place(relwidth=0.8, relheight=0.8, relx=0.1, rely=0.1)
 
-        e1_label = Label(frame1, text='Account number:')
+        e1_label = Label(self._frame, text='Account number:')
         e1_label.pack()
-        entry1 = Entry(frame1)
+        entry1 = Entry(self._frame)
         entry1.pack()
 
-        e2_label = Label(frame1, text='Account name:')
+        e2_label = Label(self._frame, text='Account name:')
         e2_label.pack()
-        entry2 = Entry(frame1)
+        entry2 = Entry(self._frame)
         entry2.pack()
 
         def save_new_account():
@@ -42,9 +40,25 @@ class AccountSchemeView:
                 return
             self._service.save_new_account(number, name)
             messagebox.showinfo(title='SUCCESS!', message='Account saved')
+            line = ' '.join([number, name])
+            lbox.insert(END, line)
 
-        save_button = Button(frame1, text='Save', command=save_new_account)
+        save_button = Button(self._frame, text='Save', command=save_new_account)
         save_button.pack()
 
-        back_button = Button(frame1, text="Back", command=self._back_to_program_view)
+        back_button = Button(self._frame, text="Back", command=self._back_to_program_view)
         back_button.pack(pady=20)
+
+        lbox = Listbox(self._frame)
+        lbox_scrollbar = Scrollbar(self._frame, orient=VERTICAL)
+        lbox_scrollbar.config(command=lbox.yview)
+        lbox_scrollbar.pack(side=RIGHT, fill=Y)
+        lbox.pack()
+
+        accounts = self._service.get_accounts()
+        for account in accounts:
+            elements = [account[0], account[1]]
+            line = ' '.join(elements)
+            lbox.insert(END, line)
+
+        

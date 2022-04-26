@@ -14,3 +14,4 @@
 
 - Lisätty näkymä tositteiden lisäämiseksi
 - Lisätty taulukko tilikartalle
+- Lisätty näkymät tilikartalle sekä tositteiden katsomista varten
