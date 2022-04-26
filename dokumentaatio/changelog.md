@@ -15,3 +15,5 @@
 - Lisätty näkymä tositteiden lisäämiseksi
 - Lisätty taulukko tilikartalle
 - Lisätty näkymät tilikartalle sekä tositteiden katsomista varten
+- Lisätty logiikkaa tuloslaskelman laskemiseen
+- Lisätty käyttöliittymään näkymä tuloslaskelmalle
