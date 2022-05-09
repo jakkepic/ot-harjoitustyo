@@ -37,3 +37,6 @@ class ProgramView:
 
         button4 = Button(frame1, text="Account Scheme", padx=20, command=self._handle_account_scheme)
         button4.pack(pady=20)
+
+        exit_button = Button(frame1, text="Exit", command=self._root.destroy)
+        exit_button.pack()

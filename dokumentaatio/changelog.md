@@ -17,3 +17,11 @@
 - Lisätty näkymät tilikartalle sekä tositteiden katsomista varten
 - Lisätty logiikkaa tuloslaskelman laskemiseen
 - Lisätty käyttöliittymään näkymä tuloslaskelmalle
+
+## Viikko 6
+
+ - Nothing
+
+## Viikko 7
+
+ - Lisätty exit-toiminto
