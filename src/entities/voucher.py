@@ -1,3 +1,4 @@
+# Used when services and database interact. 
 class Voucher():
     def __init__(self, number: int, cost_centre: str, debit_credit: int, ammount: int, message: str):
         self.number = number

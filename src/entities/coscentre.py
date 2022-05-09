@@ -1,3 +1,4 @@
+# Used by ht_service to generate income statements
 class CostCentre:
     def __init__(self, account_number, account_name):
         self.number = account_number
