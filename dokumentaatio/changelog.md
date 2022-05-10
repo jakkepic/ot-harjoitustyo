@@ -27,3 +27,6 @@
  - Lisätty exit-toiminto
  - Lisätty testejä
  - Määrittelydokumentti päivitetty
+ - Lisätty käyttöohje
+ - Lisätty testausdokumentti
+ - README-dokumentti päivitetty

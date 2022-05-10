@@ -14,5 +14,6 @@
 | 12.4. | 3    | Ohjelmointi |
 | 26.4. | 8    | Ohjelmointi |
 | 9.5.  | 1    | Lisätty exit-toiminto |
-|       | 1    | Testejä lisätty |
-| Summa | 33   | Tuntia |
+|       | 2    | Testejä lisätty |
+| 10.5. | 5    | Dokumentaation päivitys |
+| Summa | 37   | Tuntia |
