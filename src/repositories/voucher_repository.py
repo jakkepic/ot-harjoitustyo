@@ -1,10 +1,12 @@
 from entities.voucher import Voucher
 from database_connection import get_database_connection
 
+# This class handles all interactions with the database
 class VoucerRepository():
     def __init__(self) -> None:
         pass
 
+    # Methods to interact with table "vouchers"
     def save_new_voucher(self, v: Voucher):
         db = get_database_connection()
         db.isolation_level = None
@@ -29,6 +31,7 @@ class VoucerRepository():
             vouchers.append(v)
         return vouchers
     
+    # Methods to interact with table "accounts"
     def save_account(self, number: str, name: str):
         db = get_database_connection()
         db.isolation_level = None

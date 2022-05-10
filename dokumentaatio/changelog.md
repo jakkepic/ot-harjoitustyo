@@ -25,4 +25,5 @@
 ## Viikko 7
 
  - Lisätty exit-toiminto
- - Added tests
+ - Lisätty testejä
+ - Määrittelydokumentti päivitetty

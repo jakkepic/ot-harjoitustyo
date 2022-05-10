@@ -30,7 +30,7 @@ class HtService:
     def get_accounts(self):
         return self._voucher_repository.fetch_accounts()
 
-    # Methods for the costcentres
+    # Methods for creating the income statements
     def collect_data(self):
         data = []
         accountscheme = {}

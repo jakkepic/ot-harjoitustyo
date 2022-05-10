@@ -1,25 +1,36 @@
 # Vaatimusmäärittely
 ## Sovelluksen tarkoitus
-Sovelluksen tarkoitus on toimia yksinkertaisena kirjanpitoohjelmana. Käyttäjä pystyy syöttämään debet-  ja kredit-tapahtumia, ja ohjelma pystyy tuottamaan tuloslaskelman.
+Sovellus toimii yksinkertaisena kirjanpitoohjelmana. Käyttäjä pystyy syöttämään debet- ja kredit-tapahtumia, ja ohjelma pystyy tuottamaan tuloslaskelman.
 ## Käyttäjät
 Sovelluksessa on vain yksi käyttäjärooli. 
 ## Käyttöliittymäluonnos
-Sovellus tulee koostua kuudesta eri näkymästä.
+Sovellus koostuu viidestä eri näkymästä.
+Alkunäkymästä navigoidaan muihin näkymiin.
+Jokaisella käyttöliittymän näkymällä on oma toiminnallisuus.
+Toiminnallisuudet ovat seuraavat:
+ - Talentaa tositteita
+ - Tarkistaa kaikkia tositteita
+ - Näyttää tuloslaskelman
+ - Tilien/kustannuspaikkojen lisääminen
+Kuvan avulla hahmoittaa käyttöliittymän näkymät (suurin piirtein)
 ![](./kuvat/kayttoliittyma-hahmotus.jpg)
 ## Toiminnallisuus
-### Kirjautuminen
-- Organisaatio toimii kirjautumisena.
-- Käyttäjä kirjoitta organisaation nimen.
-- Jos organisaatiota ei löydy kysytään jos sitä halutaan luoda.
 ### "Perusnäkymässä"
 - Parusnäkymästä voi siirtyä seuraaviin:
   - Lisää tosite
   - Tositteet
   - Tuloslaskelma
   - Tilikartta
+  - Sulje ohjelma
 
 ### Lisää tosite
 Käyttäjä valitsee tositenumeron, kustannuspaikan, debet/kredit ja lisää selityksen.
+Kun kaikki kentät ovat syötetty oikein käyttäjä pystyy tallentamaan tositteen.
+
+Syötteiden säännöt:
+ - Samaa tositenumeroa voi käyttää vain kerran
+ - Tili täytyy olla lisättynä ennen tositteen tallentamista.
+ - 'Debit/Credit'-kenttään ainoat hyväksytyt syötteet ovat 'd' tai 'c'
 
 ### Tositteet
 Käyttäjä voi katsella tositteita ja poistaa niitä halutessaan.
@@ -27,7 +38,7 @@ Käyttäjä voi katsella tositteita ja poistaa niitä halutessaan.
 ### Tuloslaskelma
 Ohjelma luo tuloslaskelman ja esittää sen ruudulla.
 
-- Jos on aikaa niin saatetaan lisätä toiminnallisuus tallentaa jonkinlaisena dokumenttina.
+- Kehittämismahdollisuus olisi jos ohjelma tallentaisi tuloslaskelman dokumenttiin.
 
 # Tilikartta
-Käyttäjä voi lisätä ja poistaa kustannuspaikkoja.
+Käyttäjä voi lisätä kustannuspaikkoja.
