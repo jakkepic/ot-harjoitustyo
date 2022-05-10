@@ -19,4 +19,8 @@ Huom: Ohjelman asettamista varten tietokoneellasi täytyy olla pythonille poetry
 Ohjeita asettamiseen löydät täältä: [https://python-poetry.org/docs/](https://python-poetry.org/docs/)
 
 ## Dokumentaatio:
+[Käyttöohje](dokumentaatio/kayttoohje.md)
 [Määrittelydokumentti](dokumentaatio/vaatimusmaarittely.md)
+[Testaus](dokumentaatio/testaus.md)
+[Tuntikirjanpito](dokumentaatio/tuntikirjanpito.md)
+[Changelog](dokumentaatio/changelog.md)
