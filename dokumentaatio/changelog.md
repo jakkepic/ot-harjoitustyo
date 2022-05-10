@@ -29,4 +29,5 @@
  - Määrittelydokumentti päivitetty
  - Lisätty käyttöohje
  - Lisätty testausdokumentti
+ - Arkkitehtuurikuvaus lisätty
  - README-dokumentti päivitetty

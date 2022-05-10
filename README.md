@@ -23,6 +23,7 @@ Ohjeita asettamiseen löydät täältä: [https://python-poetry.org/docs/](https
 ## Dokumentaatio:
 [Käyttöohje](dokumentaatio/kayttoohje.md)  
 [Määrittelydokumentti](dokumentaatio/vaatimusmaarittely.md)  
+[Arkkitehtuurikuvaus](dokumentaatio/arkkitehtuurikuvaus.md)  
 [Testaus](dokumentaatio/testaus.md)  
 [Tuntikirjanpito](dokumentaatio/tuntikirjanpito.md)  
 [Changelog](dokumentaatio/changelog.md)  
