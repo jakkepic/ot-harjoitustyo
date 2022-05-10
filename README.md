@@ -6,14 +6,16 @@ Ohjelma on yksinkertainen kirjanpitoohjelma. Ohjelmaan voi syöttää debit ja k
 
 ## Asennus:
 1. Asenna riippuvuudet komennolla:
-Bash
-poetry install
+
+```bash poetry install```
+
 2. Alustustoimenpiteet komennolla:
-Bash
-poetry run invoke build
+
+```bash poetry run invoke build```
+
 3. Käynnistä sovellus suorittamalla komento:
-Bash
-poetry run invoke start
+
+```bash poetry run invoke start```
 
 Huom: Ohjelman asettamista varten tietokoneellasi täytyy olla pythonille poetry-työkalu asetettuna. 
 Ohjeita asettamiseen löydät täältä: [https://python-poetry.org/docs/](https://python-poetry.org/docs/)
