@@ -7,13 +7,22 @@ Pakkaus ui vastaa käyttöliittymästä, services vastaa sovelluslogiikasta ja r
 
 ## Käyttöliittymä
 
-## Sovelluslogiikka
+Käyttöliittymä sisältää viisi eri näkymää:  
+ - Päänäkymä/ valikko
+ - Tositteen lisääminen
+ - Kaikkien tositteiden listaesitys
+ - Tuloslaskelma
+ - Tilikartta / tilien lisääminen
+
+ Käyttöliittymä on toteutettu niin, että joka näkymä on oma luokkansa, ja luokka UI näyttää eri näkymät. Käyttöliittymä kutsuu vain HTService-luokan metodeja.
 
 ## Tietojen pysyväistallennus
 
 Pakkauksen repositories luokka VoucherRepository huolehtii tietojen tallettamisesta. Tiedot tallennetaal SQLite-tietoantaan data-kansiossa.
 
 ## Päätoiminnallisuudet
+
+Tässä nähdään sekvenssikaavio tositteen tallentamisesta:  
 
 ```mermaid
 sequenceDiagram
@@ -25,4 +34,18 @@ sequenceDiagram
   VoucherRepository->HTService:True
   HTService->UI:True
   UI->Main:Show message "Saved Voucher"
-```
+```  
+
+Sekvenssikaavio tuloslaskelman muodostamisesta:
+
+```mermaid
+sequenceDiagram
+Main->UI: Click "Income statement" button
+UI->HTService: .get_income_statement_lines()
+HTService->VoucherRepository: .fetch_accounts()
+VoucherRepository->HTService: accounts
+HTService->VoucherRepository: .fetch_vouchers()
+VoucherRepository->HTService: vouchers
+HTService->UI: data
+UI->Main:Show income statement view
+```  

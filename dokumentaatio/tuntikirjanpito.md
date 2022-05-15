@@ -16,4 +16,6 @@
 | 9.5.  | 1    | Lisätty exit-toiminto |
 |       | 2    | Testejä lisätty |
 | 10.5. | 5    | Dokumentaation päivitys |
-| Summa | 37   | Tuntia |
+| 14.5. | 1    | Arkkitehtuurin dokumentaatio |
+| 15.5. | 1    | Arkkitehtuurin dokumentaatio |
+| Summa | 39   | Tuntia |
