@@ -16,14 +16,13 @@ Pakkauksen repositories luokka VoucherRepository huolehtii tietojen tallettamise
 ## Päätoiminnallisuudet
 
 ```mermaid
-title Save voucher
-
-Main->UI: Click "add voucher" button
-UI->Main: Show add voucher view
-Main->UI: Click "Save" button, input values (1, "10099", "d", 1000, "licence sales")
-UI->HTService: .save_voucher (1, "10099", "d", 1000, "licence sales")
-HTService->VoucherRepository: .save_voucher (1, "10099", "d", 1000, "licence sales")
-VoucherRepository->HTService:True
-HTService->UI:True
-UI->Main:Show message "Saved Voucher"
+sequenceDiagram
+  Main->UI: Click "add voucher" button
+  UI->Main: Show add voucher view
+  Main->UI: Click "Save" button, input values (1, "10099", "d", 1000, "licence sales")
+  UI->HTService: .save_voucher (1, "10099", "d", 1000, "licence sales")
+  HTService->VoucherRepository: .save_voucher (1, "10099", "d", 1000, "licence sales")
+  VoucherRepository->HTService:True
+  HTService->UI:True
+  UI->Main:Show message "Saved Voucher"
 ```
